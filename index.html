@@ -4,11 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 4 Project</title>
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="anchor"></div>
-    </div>
-    <script src="/src/app.js"></script>
+    <nav>
+        <ul class="navbar-menu">
+            <li class="logo-img">
+                <img src="./src/imgs/donut.png" alt="Cookie">
+            </li>
+            <li class="navbar-item" id="company-name">
+                Fred the Baker Baking Company
+            </li>
+            <li class="navbar-item">
+                <a id="item1" href="#">About The Company</a>
+            </li>
+            <li class="navbar-item">
+                <a id="item2" href="#">Inspiration</a>
+            </li>
+            <li class="navbar-item">
+                <a id="item3" href="#">Contact Info</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="grid-container1">
+       <div class="grid-item1" id="auto-clicker">
+           <h3>AutoClickers purchased: </h3>
+           <button class="button">BUY</button>
+       </div>
+       <div class="grid-item1" id="donut-multi">
+           <h3>DonutMultipliers purchased:</h3>
+           <button class="button">BUY</button>
+       </div>
+    </main>
+
+    <main class="grid-container2">
+        <div class="grid-item2" id="donut-maker">
+            <h3>Donuts made:</h3>
+             <button class="button">MAKE DONUTS</button>
+        </div>
+    </main>
+
+    <script src="./src/js/app.js"></script>
 </body>
 </html>
