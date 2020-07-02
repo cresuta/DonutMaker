@@ -19,7 +19,7 @@
                 <a id="item1" href="#">About The Company</a>
             </li>
             <li class="navbar-item">
-                <a id="item2" href="#">Inspiration</a>
+                <a id="item2" target="_blank" href="https://orteil.dashnet.org/cookieclicker/">Inspiration</a>
             </li>
             <li class="navbar-item">
                 <a id="item3" href="#">Contact Info</a>
@@ -29,22 +29,104 @@
 
     <main class="grid-container1">
        <div class="grid-item1" id="auto-clicker">
-           <h3>AutoClickers purchased: </h3>
-           <button class="button">BUY</button>
+           <h3>AutoClickers purchased:<span id="auto-count"></span></h3>
+           <button class="button" id="auto-button">BUY</button>
        </div>
        <div class="grid-item1" id="donut-multi">
-           <h3>DonutMultipliers purchased:</h3>
-           <button class="button">BUY</button>
+           <h3>DonutMultipliers purchased:<span id="multiplier-count"></span></h3>
+           <button class="button" id="multi-button">BUY</button>
        </div>
     </main>
 
     <main class="grid-container2">
         <div class="grid-item2" id="donut-maker">
-            <h3>Donuts made:</h3>
-             <button class="button">MAKE DONUTS</button>
+            <h3>Donuts made:<span id="donut-count"></span></h3>
+            <button class="button" id="donut-button">MAKE DONUTS</button>
         </div>
     </main>
 
+    <main class="grid-container3">
+        <div class="grid-item3" id="game-rules">
+            <h3>Game Rules</h3>
+            <button class="button" id="reset-button">GAME RESET</button>
+            <h5>1) Click as fast as you can to make as many donuts as you can! </h5>
+            <h5>2) If your "Donuts Made" count is greater than 100, you
+                can now purchase your first AutoClicker
+            </h5>
+            <h5>
+                3) An AutoClicker will automatically click for us every second, so we don't
+                have to click manually
+            </h5>
+            <h5>
+                4) AutoClicker's apply one click per second for every AutoClicker purchased
+                (ex. 1st auto clicker = 1 clicks/second, 2nd auto clicker = 2 clicks/second,
+                3rd auto clicker = 3 clicks/second, etc...)
+            </h5>
+            <h5>5) Each time you purchase an AutoClicker, the cost to purchase will increase
+                by 10 donuts (ex. 1st auto clicker = 100 donuts, 2nd auto clicker = 110 donuts, 
+                3rd auto clicker = 120 donuts, etc...) 
+            </h5>
+            <h5>6) Once you purchase an AutoClicker, your "Donuts Made" count will decrease by
+                the amount the AutoClicker costs
+            </h5>
+            <h5>
+                7) If you do not have enough "Donuts Made" to purchase an AutoClicker, we cleverly 
+                greyed out and disabled the BUY button until you do
+            </h5>
+            <h5>8) If your "Donuts Made" count is greater than 10, you can now buy your first
+                DonutMultiplier
+            </h5>
+            <h5>
+                9) A DonutMultiplier will increase the number of donuts made for us each time 
+                we click
+            </h5>
+            <h5>
+                10) Donut Multipliers increase the value of a click by 20% for every Donut Multiplier 
+                purchased (ex. 1st donut multiplier = 1.2 donuts earned/click, 2nd donut multiplier =
+                1.44 donuts earned/click, 3rd donut multiplier = 1.728 donuts earned/click)
+            </h5>
+            <h5>11) Each time you purchase a DonutMultiplier, the cost to purchase will increase by 
+                10% (ex. 1st donut multiplier = 10 donuts, 2nd donut multiplier = 11 donuts, 3rd
+                donut multiplier = 12.1 donuts, etc...)
+            </h5>
+            <h5>12) Once you purchase a Donut Multiplier, your "Donuts Made" count will decrease by
+                the amount the Donut Multiplier costs
+            </h5>
+            <h5>
+                13) If you do not have enough "Donuts Made" to purchase a Donut Multiplier, we cleverly 
+                (yet again) greyed out and disabled the BUY button until you do
+            </h5>
+            <h5>
+                14) Lastly, if you want to reset the game so your coworkers won't know how much time you
+                wasted on clicking a button for the past hour...simply click the "GAME RESET" at the top of
+                our game rules page
+            </h5>
+        </div>
+    </main>
+
+    <!-- About The Company: Modal 1 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Fred the Baker Baking Company was founded on July 1st, 2020 in a small apartment office in Dublin, Ohio. 
+            This is not your typical baking company whatsoever. We have no employees (other than our part-time web developer who made this site) 
+            and all of our customers are in charge of making as MANY donuts as they can with a simple click of the mouse!
+          </p>
+        </div>
+    </div>
+
+      <!-- Contact Info: Modal 2 -->
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Hello, my name is Cameron Resuta...</h3>
+          <h5>Full-Stack Software Developer from Columbus, Ohio</h5>
+          <h5>Want to check out my personal portfolio? <a target="_blank" href="https://cresuta.github.io">Click Here!</a></h5>
+          <h5>How about a few projects I've done on Github? <a target="_blank" href="https://github.com/cresuta?tab=repositories">Click Here!</a></h5>
+        </div>
+    </div>
+
     <script src="./src/js/app.js"></script>
+    <script src="./src/js/donut-maker.js"></script>
 </body>
 </html>
