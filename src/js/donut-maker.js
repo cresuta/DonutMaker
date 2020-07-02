@@ -45,6 +45,37 @@ function buyAutoClicker() {
 */
 
 // Be able to purchase the first DonutMultiplier with 10 clicks from 
+let multipliersDisplayed = document.querySelector("#multiplier-count");
+let multiplierButton = document.querySelector("#multi-button");
+let nextMultiplierCost = document.querySelector("#multiplier-cost");
+let multiplierCount = 0;
+let multiplierCost = 10;
+
+
+function enableMultiClicker() {
+    setInterval(function() {
+        donutCount += multiplierCount;
+        donutsDisplayed.innerHTML = Math.round(donutCount)
+    }, 1000);
+}
+
+multiplierButton.addEventListener("click", buyMultiplier);
+
+function buyMultiplier() {
+    if (donutCount >= multiplierCost) {
+        multiplierCount += 1;
+        donutCount -= multiplierCost;
+        multiplierCost = Math.round(multiplierCost * 1.1);
+        donutsDisplayed.innerText = Math.round(donutCount);
+        nextMultiplierCost.innerText = multiplierCost + " donuts";
+        multipliersDisplayed.innerText = multiplierCount;
+        if (multiplierCount <= 1) {
+            enableMultiClicker();
+        }
+    }
+}
+
+
 
 
 /*
