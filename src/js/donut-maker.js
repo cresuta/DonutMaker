@@ -3,9 +3,9 @@
 // Feature: Have a way to count donuts
 let donutsDisplayed = document.querySelector("#donut-count");
 let donutButton = document.querySelector("#donut-button");
-let donutCount = 200;
+let donutCount = 0;
 donutButton.addEventListener("click", function() {
-    donutCount += 1;
+    donutCount += Math.pow(1.2, multiplierCount);
     donutsDisplayed.innerText = Math.round(donutCount);
 });
 
@@ -51,7 +51,6 @@ let nextMultiplierCost = document.querySelector("#multiplier-cost");
 let multiplierCount = 0;
 let multiplierCost = 10;
 
-
 function enableMultiClicker() {
     setInterval(function() {
         donutCount += multiplierCount;
@@ -77,18 +76,23 @@ function buyMultiplier() {
 
 
 
-
 /*
     Iteration 5
 */
 
 // Feature: Implement a way to reset the game
-// const gameReset = document.querySelector("#reset-button");
-// gameReset.addEventListener("click", function() {
-//     donutCount = 0;
-//     donutsDisplayed.innerHTML = donutCount;
-//     autoClickerCount = 0;
-//     autoClickersDisplayed.innerHTML = autoClickerCount;
-//     multiplierCount = 0;
-//     multiplierCountDisplayed.innerHTML = multiplierCount;
-// })
+const gameReset = document.querySelector("#reset-button");
+gameReset.addEventListener("click", function() {
+    donutCount = 0;
+    autoClickerCount = 0;
+    multiplierCount = 0;
+    nextAutoClickerCost = 100;
+    nextMultiplierCost = 10;
+    
+    donutsDisplayed.innerText = donutCount;
+    autoClickersDisplayed.innerText = autoClickerCount;
+    multiplierCountDisplayed.innerText = multiplierCount;
+   
+    nextAutoClickerCost.innerText = nextAutoClickerCost + " donuts";
+    nextMultiplierCost.innerText = nextMultiplierCost + " donuts";
+})
