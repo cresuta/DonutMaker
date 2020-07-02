@@ -34,7 +34,6 @@ button3.addEventListener("click", function() {
     button3.style.color = "#ffb0c1";
 });
 
-
 /*
 About The Company: Modal 1
 */
