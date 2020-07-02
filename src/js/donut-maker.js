@@ -1,15 +1,14 @@
-// Iteration 1
-
-// Feature: Have a way to count donuts
+// Donut
 let donutsDisplayed = document.querySelector("#donut-count");
 let donutButton = document.querySelector("#donut-button");
 let donutCount = 0;
+
 donutButton.addEventListener("click", function() {
     donutCount += Math.pow(1.2, multiplierCount);
     donutsDisplayed.innerText = Math.round(donutCount);
 });
 
-// Feature: Be able to purchase the first AutoClicker with 100 donuts from your donut count
+// AutoClicker
 let autoClickersDisplayed = document.querySelector("#auto-count");
 let autoClickerButton = document.querySelector("#auto-button");
 let nextAutoClickerCost = document.querySelector("#auto-cost");
@@ -25,7 +24,6 @@ function enableAutoClicker() {
 
 autoClickerButton.addEventListener("click", buyAutoClicker);
 
-// Feature: The cost of each AutoClicker will go up 10% with each purchase
 function buyAutoClicker() {
     if (donutCount >= autoClickerCost){
         autoClickerCount += 1;
@@ -40,11 +38,7 @@ function buyAutoClicker() {
     }
 }
 
-/*
-    Iteration 2
-*/
-
-// Be able to purchase the first DonutMultiplier with 10 clicks from 
+// DonutMultiplier
 let multipliersDisplayed = document.querySelector("#multiplier-count");
 let multiplierButton = document.querySelector("#multi-button");
 let nextMultiplierCost = document.querySelector("#multiplier-cost");
@@ -74,25 +68,18 @@ function buyMultiplier() {
     }
 }
 
-
-
-/*
-    Iteration 5
-*/
-
-// Feature: Implement a way to reset the game
+// Game Reset
 const gameReset = document.querySelector("#reset-button");
+
 gameReset.addEventListener("click", function() {
     donutCount = 0;
     autoClickerCount = 0;
     multiplierCount = 0;
-    nextAutoClickerCost = 100;
-    nextMultiplierCost = 10;
     
     donutsDisplayed.innerText = donutCount;
     autoClickersDisplayed.innerText = autoClickerCount;
-    multiplierCountDisplayed.innerText = multiplierCount;
+    multipliersDisplayed.innerText = multiplierCount;
    
-    nextAutoClickerCost.innerText = nextAutoClickerCost + " donuts";
-    nextMultiplierCost.innerText = nextMultiplierCost + " donuts";
+    nextAutoClickerCost.innerText = "100 donuts";
+    nextMultiplierCost.innerText = "10 donuts";
 })
