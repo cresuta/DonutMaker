@@ -10,9 +10,6 @@ const inspiration = document.querySelector("#item2");
 inspiration.addEventListener("mouseover", function() {
     inspiration.style.color = "#06B583";
 });
-inspiration.addEventListener("click", function() {
-    alert('Fred the Baker Baking Company drew inspiration from the original "Cookie Clicker" game where we give all of our customers the chance to make as MANY donuts as they want with a simple click of their mouse!');
-});
 
 const contactInfo = document.querySelector("#item3");
 
