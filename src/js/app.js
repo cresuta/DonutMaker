@@ -40,7 +40,7 @@ let modal = document.getElementById("myModal");
 let btn = document.getElementById("item1");
 
 // Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close");
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -68,7 +68,7 @@ let modal2 = document.getElementById("myModal2");
 let btn2 = document.getElementById("item3");
 
 // Get the <span> element that closes the modal
-let span2 = document.getElementsByClassName("close")[0];
+let span2 = document.getElementsByClassName("close");
 
 // When the user clicks on the button, open the modal
 btn2.onclick = function() {

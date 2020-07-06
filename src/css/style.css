@@ -203,17 +203,11 @@ ul li {
     to {top: 0; opacity: 1}
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Modal 2 : Contact Info */
@@ -221,6 +215,7 @@ ul li {
     display: none; 
     position: fixed; 
     z-index: 1; 
+    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%; 
@@ -230,23 +225,46 @@ ul li {
     background-color: rgba(0,0,0,0.4); 
   }
 
+.modal-header2 {
+    padding: 2px 16px;
+    background-color: #ffb0c1;
+    color: white;
+}
+
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 1.0s 
 }
 
 .close {
-    color: #aaa;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,.close:focus {
+.close2:hover,
+.close2:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Contact info click here buttons */
+.click-here {
+    color: white;
+    background-color: #ffb0c1;
+    border-radius: 20px;
+    font-size: 16px;
+    border: 2px solid #ffb0c1;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    outline: none;
+    position: relative;
 }
